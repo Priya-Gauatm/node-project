@@ -1,0 +1,38 @@
+<section class="trending_sec py-2">
+    <div class="container container-custom">
+        <div class="row justify-content-center">
+            <h2 class="pg-heading text-center">
+                Top Trending Furnitures
+            </h2>
+            <p class="heading-para text-center">
+                We Have Everything You Need
+            </p>
+            <% for(let i = 0; i < top_tranding .length; i++) { %>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 wdith-50-sm-top">
+                <div class="trending-product-box">
+                    <div class="product_img">
+                        <a href="tv-units">
+                            <span class="sale-badge">
+                                Best<br>Sale
+                            </span>
+                            <picture>
+                                <source srcset="<%= top_tranding [i].srcset %>" type="image/avif">
+                                <img src="<%= top_tranding[i].product_image %>" class="img-responsive img-fluid" loading="lazy" alt="premium tv units">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="product-content">
+                        <a href="tv-units" class="p_item-name">
+                            <%= top_tranding [i].product_name %>
+                        </a>
+                        <div class="p_item-price">
+                            <p>Starting From<br><span class="tax-text">(inclusive of all taxes)</span></p>
+                            <h5 class="p_item-amount_"><i class="bx bx-rupee"></i><%= top_tranding[i].product_price %></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </div>
+</section>
